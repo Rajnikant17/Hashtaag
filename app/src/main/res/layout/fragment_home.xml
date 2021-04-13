@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.HomeFragment">
 
     <Button
@@ -11,6 +12,10 @@
         android:layout_height="60dp"
         android:text="@string/get_image"
        android:layout_centerHorizontal="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
         />
      <androidx.appcompat.widget.AppCompatImageView
          android:id="@+id/iv_downloaded"
@@ -21,6 +26,10 @@
          android:layout_marginBottom="200dp"
          android:scaleType="fitXY"
          android:background="@color/black"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
          />
     <ProgressBar
         android:id="@+id/progressbar"
@@ -28,6 +37,10 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         android:layout_centerInParent="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
